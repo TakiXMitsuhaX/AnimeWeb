@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Osamu</title>
+</head>
+<body>
+    <div id="lds-ellipsis" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    <div id="container" class="container">
+        <div class="sidenav">
+            <header></header>
+            <div class="search-container">
+                <input id="user-input" placeholder="Search...">
+                <button id="search-button" type="button">🔎</button>
+            </div>
+            <nav>
+                <ul>
+                    <li class="nav-item active" data-target="home">🏠 HOME</li>
+                    <li class="nav-item" data-target="task">📰 RECENT</li>
+                    <li class="nav-item" data-target="watchlist">🍿 POPULAR</li>
+                    <li class="nav-item" data-target="settings">🎬 MOVIES</li>
+                    <li class="nav-item" data-target="genre">🪄 GENRE</li>
+                    <li class="nav-item" data-target="season">⛈️ SEASON</li>
+                    <li class="nav-item" data-target="about">❔ ABOUT</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="div2">
+                <!-- Add this HTML structure for the loading container inside the "home" page -->
+                <div id="home" class="page active">
+                    <div id="top" class="top">TOP AIRING</div>
+                    <div id="image-container" class="image-container">
+                        <!-- Images will be dynamically added here -->
+                    </div>
+                    <div id="recent" class="recent">RECENT RELEASE</div>
+                    <div id="image-container-recent" class="image-container-recent">
+                        <!-- Images will be dynamically added here -->
+                    </div>
+                    <div id="popular" class="popular">POPULAR</div>
+                    <div id="image-container-popular" class="image-container-popular">
+                        <!-- Images will be dynamically added here -->
+                    </div>
+                    <div id="movie" class="movie">MOVIES</div>
+                    <div id="image-container-movie" class="image-container-movie">
+                        <!-- Images will be dynamically added here -->
+                    </div>
+                    <div id="genre-romance" class="genre-romance">ROMANCE</div>
+                    <div id="image-container-genre-romance" class="image-container-genre-romance">
+                        <!-- Images will be dynamically added here -->
+                    </div>
+                    <div id="genre-action" class="genre-action">ACTION</div>
+                    <div id="image-container-genre-action" class="image-container-genre-action">
+                        <!-- Images will be dynamically added here -->
+                    </div>
+                </div>
+                <div id="task" class="page">
+                    <h1>HARRY KALBO</h1>
+                </div>
+    
+                <div id="watchlist" class="page">
+                    <h1>WATCHLIST</h1>
+                </div>
+    
+                <div id="notification" class="page">
+                    <h1>NOTIFICATION</h1>
+                </div>
+    
+                <div id="settings" class="page">
+                    <h1>MOVIES</h1>
+                </div>
+    
+                <div id="genre" class="page">
+                    <h1>GENRE</h1>
+                </div>
+
+                <div id="season" class="page">
+                    <h1>SEASON</h1>
+                </div>
+
+                <div id="about" class="page">
+                    <h1>ABOUT</h1>
+                </div>
+
+                <div id="search" class="page">
+                    <div id="search-anime-results" class="search-anime-results">RESULTS</div>
+                    <div id="image-container-search" class="image-container-search">
+                        <!-- Images will be dynamically added here -->
+                    </div>
+                </div>
+
+                <div id="description" class="page">
+                    <div class="description-container">
+                        <div id="back-button" class="back-button">BACK</div>
+                        <div id="anime-description" class="anime-description"></div>
+                        <div id="image-container-details" class="image-container-details">
+                            <!-- Images will be dynamically added here -->
+                        </div>
+                        <div id="type-anime" class="type-anime"></div>
+                        <div id="release-date" class="release-date"></div>
+                        <div id="status" class="status"></div>
+                        <div id="genres" class="genres"></div>
+                        <div id="totalEpisodes" class="totalEpisodes"></div>
+                        <div id="synopsis" class="synopsis"></div>
+                        <div id="video-container" class="video-container">
+                            <!-- Add this container to your HTML -->
+                        </div>
+                        <div id="episode-buttons-container" class="episode-buttons-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include Axios from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="back.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

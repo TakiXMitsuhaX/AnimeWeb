@@ -1,0 +1,498 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e2b4f;
+}
+
+.sidenav > header {
+    color: aliceblue;
+    font-size: larger;
+    padding-left: 80px;
+    padding-top: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url("logo.png");
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    margin-bottom: 40px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.container {
+    display: none;
+}
+
+.sidenav {
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    width: 320px;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.search-container {
+    padding: 10px;
+    text-align: center;
+    user-select: none;
+}
+
+.search-container input {
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #ffffff;
+}
+
+.search-container button {
+    padding: 8px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.search-container input:focus {
+    border: 2px solid #ffffff;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 20%;
+}
+
+nav li {
+    padding: 5%;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.6s ease-in-out;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    display: block;
+    width: fit-content;
+    user-select: none;
+}
+
+nav li:hover {
+    color: rgb(0, 153, 255);
+    border-radius: 50px;
+    transform: scale(1.4);
+    display: inline-block;
+    width: auto;
+    user-select: none;
+}
+
+.nav-item.active {
+    color: rgb(0, 153, 255);
+    text-align: left;
+    position: relative;
+    left: 0;
+    transform: scale(1.4) translateX(30px);
+    user-select: none;
+}
+
+.content {
+    margin-left: 320px;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+}
+
+.div2 {
+    width: 100%;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px;
+    padding: 20px;
+}
+
+.image-container-recent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.image-container-popular {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.image-container-movie {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.image-container-genre-romance {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.image-container-genre-action {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.image-container-search {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.image-div {
+    position: relative;
+    user-select: none; /* Add this line to make the entire image-div not selectable */
+}
+
+.image-div:hover {
+    cursor: pointer;
+}
+
+.dynamic-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.dynamic-image:hover {
+    filter: brightness(80%);
+    transition: filter 0.3s ease;
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+.image-div:hover .image-description {
+    opacity: 1; /* Show the description on hover */
+    transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+.image-description {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    user-select: none; /* Add this line to make the content not selectable */
+    opacity: 0; /* Initially hide the description */
+    transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+
+.top {
+    background-color:rgb(226, 43, 43);
+    color: #ffffff;
+    font-size:x-large;
+    font-weight: 100;
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    user-select: none;
+}
+
+.recent {
+    background-color:rgb(226, 43, 43);
+    color: #ffffff;
+    font-size:x-large;
+    font-weight: 100;
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    user-select: none;
+}
+
+.popular {
+    background-color:rgb(226, 43, 43);
+    color: #ffffff;
+    font-size:x-large;
+    font-weight: 100;
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    user-select: none;
+}
+
+.movie {
+    background-color:rgb(226, 43, 43);
+    color: #ffffff;
+    font-size:x-large;
+    font-weight: 100;
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    user-select: none;
+}
+
+.genre-romance {
+    background-color:rgb(226, 43, 43);
+    color: #ffffff;
+    font-size:x-large;
+    font-weight: 100;
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    user-select: none;
+}
+
+.genre-action {
+    background-color:rgb(226, 43, 43);
+    color: #ffffff;
+    font-size:x-large;
+    font-weight: 100;
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    user-select: none;
+}
+
+.search-anime-results {
+    background-color:rgb(226, 43, 43);
+    color: #ffffff;
+    font-size:x-large;
+    font-weight: 100;
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    user-select: none;
+}
+
+.lds-ellipsis {
+    display: none;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #ffffff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
+.dynamic-image-description {
+    width: 20%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.image-description-title {
+    color: white;
+    font-size: 30px
+}
+
+.image-description-type {
+    color: white;
+    font-size: 30px
+}
+
+.image-description-release {
+    color: white;
+    font-size: 30px
+}
+
+.image-description-status {
+    color: white;
+    font-size: 30px
+}
+
+.image-description-genres {
+    color: white;
+    font-size: 30px
+}
+
+.image-description-total {
+    color: white;
+    font-size: 30px
+}
+
+.image-description-synopsis {
+    color: white;
+    font-size: 30px
+}
+
+.image-description-episodes {
+    width: 600px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.image-description-search {
+    width: 600px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.description-container {
+    color: white;
+    display: inline;
+    user-select: none;
+}
+
+.video-container {
+    width: 600px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.back-button {
+    background-color:rgb(226, 43, 43);
+    color: #ffffff;
+    font-size:x-large;
+    font-weight: 100;
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidenav {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
